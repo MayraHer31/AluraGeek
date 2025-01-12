@@ -23,18 +23,6 @@ body {
 
 /* Estilos para el main */
 .main-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 20px;
-    background-color: #ffffff; 
-    width: 100%; 
-    box-sizing: border-box; 
-  }
-
-/* Sección de productos */
-.main-container {
   display: flex;
   justify-content: space-between; 
   align-items: flex-start;
@@ -239,12 +227,12 @@ height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Espacio entre elementos */
+  gap: 10px; 
 }
 
 .footer-logo {
-  width: 374px; /* Ancho exacto según Figma */
-  height: 56px; /* Alto exacto según Figma */
+  width: 374px; 
+  height: 56px; 
 }
 
 .footer-text {
@@ -253,4 +241,89 @@ height: auto;
   font-family: 'IBM Plex Mono', monospace;
 }
 
-  
+/* Media Query para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; 
+    gap: 30px; 
+  }
+
+  .form-section, .products-section {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .products-section {
+    order: 2; /
+  }
+
+  .form-section {
+    order: 1; 
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    width: 100%; 
+  }
+
+  .product-card {
+    background-color: #4b0082;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+    min-height: 150px; 
+    max-width: 100%; 
+  }
+
+  .product-card__image {
+    width: 80px; 
+    height: 80px;
+    object-fit: cover; 
+    margin-bottom: 10px;
+    max-width: 100%; 
+    max-height: 100%; 
+    box-sizing: border-box; 
+  }
+
+  .product-card__name, .product-card__price {
+    font-size: 12px; 
+  }
+
+  .btn-delete {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  .product-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-buttons {
+    flex-direction: column; 
+    gap: 10px;
+  }
+
+  .footer-logo {
+    width: 200px;
+    height: auto;
+  }
+
+  .footer-text {
+    font-size: 10px;
+  }
+}
