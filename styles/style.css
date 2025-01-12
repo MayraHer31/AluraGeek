@@ -9,19 +9,16 @@ body {
 
 /* Header */
 .header {
-    display: flex;
-    align-items: center; /* Alinea verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    background-color: #5300C8; /* Color púrpura del diseño */
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    height: 50px; /* Altura definida en el Figma */
-    padding: 20px 0; /* Espaciado superior e inferior */
+  background: linear-gradient(90deg, #5D04D9, #2B00B9); 
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .header__icon {
-    width: 374px; /* Ancho definido en el Figma */
-    height: 56px; /* Altura definida en el Figma */
-    object-fit: contain; /* Asegura que el logo mantenga proporciones */
+    width: 374px; 
+    height: 56px;
+    object-fit: contain; 
 }
 
 /* Estilos para el main */
@@ -31,7 +28,7 @@ body {
     align-items: flex-start;
     padding: 20px;
     gap: 20px;
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff; 
     width: 100%; 
     box-sizing: border-box; 
   }
@@ -39,13 +36,13 @@ body {
 /* Sección de productos */
 .main-container {
   display: flex;
-  justify-content: space-between; /* Espacio entre la sección de productos y el formulario */
+  justify-content: space-between; 
   align-items: flex-start;
   padding: 20px;
   gap: 20px;
-  background-color: #ffffff; /* Fondo blanco */
-  width: 100%; /* Asegura que ocupe todo el ancho disponible */
-  box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+  background-color: #ffffff; 
+  width: 100%;
+  box-sizing: border-box; 
 }
 
 /* Sección de productos */
@@ -60,7 +57,7 @@ body {
 }
 
 .products-section {
-width: 50%; /* Ancho del 50% para dejar espacio a la derecha */
+width: 50%;
 padding: 20px;
 box-sizing: border-box;
 }
@@ -78,7 +75,9 @@ color: #000000;
   display: flex;
   flex-wrap: wrap; 
   gap: 20px; 
-  justify-content: flex-start; /* Alinea a la izquierda */
+  justify-content: flex-start; 
+  max-height: 600px;
+  overflow-y: auto;  /* Habilita el desplazamiento vertical */
   padding: 20px;
   margin-top: 20px;
   border: 1px solid #ccc;
@@ -87,9 +86,25 @@ color: #000000;
   box-sizing: border-box;
 }
 
+.products-grid::-webkit-scrollbar {
+  width: 15px; /* Ancho de la barra de desplazamiento */
+}
+
+.products-grid::-webkit-scrollbar-thumb {
+  background-color: #a8a8a8; /* Color de la barra */
+}
+
+.products-grid::-webkit-scrollbar-thumb:hover {
+  background-color: #888484; 
+}
+
+.products-grid::-webkit-scrollbar-track {
+  background-color: #ffffff; /* Color del fondo de la barra */
+  border-radius: 10px; 
+}
 
 .product-card {
-background: #5D04D9; /* Color principal de la paleta */
+background: #5D04D9;
 border: 3px solid #000000; 
 border-radius: 10px; 
 box-shadow: -5px 6px 3.3px rgba(0, 0, 0, 0.25);
@@ -117,79 +132,125 @@ height: auto;
 }
 
 .btn-delete {
-  width: 24px; /* Tamaño del ícono */
+  width: 24px;
   height: 24px;
-  cursor: pointer; /* Manito al pasar el mouse */
-  transition: transform 0.2s ease; /* Efecto de escala */
+  cursor: pointer; 
+  transition: transform 0.2s ease; 
 }
 
 .btn-delete:hover {
-  transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse */
+  transform: scale(1.2); 
 }
 
-  /* Formulario */
-  .form-section {
-    flex: 1; /* Ocupa menos espacio */
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    padding: 16px;
-  }
-  
-  .form-title {
-    font-size: 1.5rem;
-    font-family: 'Press Start 2P';
-    margin-bottom: 16px;
-    color: #333;
-  }
-  
-  .product-form label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 8px;
-    color: #555;
-  }
-  
-  .product-form input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .form-buttons {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .btn-submit,
-  .btn-reset {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .btn-submit {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-reset {
-    background-color: #f44336;
-    color: #fff;
-  }
-  
+/* Sección del formulario */
+.form-section {
+  width: 50%; 
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+}
+
+.form-title {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; 
+  color: #000000; 
+  margin-bottom: 20px; 
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;
+  width: 100%; 
+}
+
+.product-form label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  color: #000000; 
+}
+
+.product-form input {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: #000000; 
+  border: 2px solid #000080; 
+  border-radius: 25px; 
+  padding: 10px 15px; 
+  outline: none; /* Quita el borde al enfocar */
+  transition: border-color 0.3s ease; 
+}
+
+.product-form input:focus {
+  border-color: #1E90FF; 
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between; 
+  gap: 10px; 
+}
+
+.btn-submit,
+.btn-reset {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase; 
+  padding: 10px 20px;
+  border: 2px solid #000080; 
+  border-radius: 20px; 
+  background-color: #000080; 
+  color: #ffffff; 
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.btn-submit:hover,
+.btn-reset:hover {
+  background-color: #1E90FF; 
+  transform: scale(1.1); 
+}
+
+.btn-reset {
+  background-color: transparent; 
+  color: #000080; 
+}
+
+.btn-reset:hover {
+  color: #ffffff; 
+}
+
 /* Footer */
 .footer {
-    background-color: #4a148c; /* Color púrpura oscuro */
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
+  background-color: #5D04D9; /* Fondo morado */
+  color: #fff; /* Texto blanco */
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'IBM Plex Mono', sans-serif;
 }
 
-.footer__text {
-    margin: 5px 0;
-    font-size: 14px;
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Espacio entre elementos */
 }
+
+.footer-logo {
+  width: 374px; /* Ancho exacto según Figma */
+  height: 56px; /* Alto exacto según Figma */
+}
+
+.footer-text {
+  font-size: 12px;
+  margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+  
