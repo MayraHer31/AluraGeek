@@ -51,7 +51,7 @@ function renderProducts() {
         <img src="${product.image}" alt="${product.name}" class="product-card__image">
         <h3 class="product-card__name">${product.name}</h3>
         <span class="product-card__price">$${product.price}</span>
-        <button class="btn-delete" data-id="${product.id}">Eliminar</button>
+        <img src="assets/trash.png" alt="Eliminar producto" class="btn-delete" data-id="${product.id}">
       `;
       productsGrid.appendChild(productCard);
     });

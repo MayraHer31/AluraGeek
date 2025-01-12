@@ -117,18 +117,14 @@ height: auto;
 }
 
 .btn-delete {
-  background-color: #ff4d4d;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
+  width: 24px; /* Tamaño del ícono */
+  height: 24px;
+  cursor: pointer; /* Manito al pasar el mouse */
+  transition: transform 0.2s ease; /* Efecto de escala */
 }
 
 .btn-delete:hover {
-  background-color: #e60000;
+  transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse */
 }
 
   /* Formulario */
