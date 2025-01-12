@@ -1,0 +1,179 @@
+/* Estilo general */
+body {
+    font-family: 'IBM Plex Mono', monospace; 
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    background-color: #5300C8; /* Color púrpura del diseño */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 50px; /* Altura definida en el Figma */
+    padding: 20px 0; /* Espaciado superior e inferior */
+}
+
+.header__icon {
+    width: 374px; /* Ancho definido en el Figma */
+    height: 56px; /* Altura definida en el Figma */
+    object-fit: contain; /* Asegura que el logo mantenga proporciones */
+}
+
+/* Estilos para el main */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+  }
+
+/* Sección de productos */
+/* Contenedor principal */
+.main-container {
+  display: flex;
+  justify-content: space-between; /* Espacio entre la sección de productos y el formulario */
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  background-color: #ffffff; /* Fondo blanco */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+}
+
+/* Sección de productos */
+.products-section {
+width: 50%; /* Ancho del 50% para dejar espacio a la derecha */
+padding: 20px;
+box-sizing: border-box;
+}
+
+.products-title {
+font-size: 24px;
+font-weight: bold;
+font-family: 'Press Start 2P';
+text-align: center;
+margin-bottom: 20px;
+color: #000000; /* Color principal de la paleta */
+}
+
+.products-grid {
+display: flex; /* Asegura el uso de flexbox */
+flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente a varias filas */
+gap: 20px; /* Espacio entre las tarjetas */
+justify-content: flex-start; /* Alinea tarjetas a la izquierda */
+max-height: 600px; /* Ajusta la altura máxima del contenedor */
+overflow-y: auto; /* Permite desplazamiento vertical */
+padding: 20px; /* Espaciado interior del contenedor */
+margin-top: 20px; /* Espacio entre el título y las tarjetas */
+border: 1px solid #ccc; /* Borde opcional para visualizar el contenedor */
+background-color: #f9f9f9; /* Fondo casi invisible */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+box-sizing: border-box; /* Asegura que el espaciado y el borde se incluyan en el tamaño total */
+}
+
+.product-card {
+background: #5D04D9; /* Color principal de la paleta */
+border: 3px solid #000000; /* Borde negro */
+border-radius: 10px; /* Bordes redondeados */
+box-shadow: -5px 6px 3.3px rgba(0, 0, 0, 0.25); /* Sombra */
+display: flex; /* Flexbox para organizar contenido */
+flex-direction: column; /* Contenido en columna */
+justify-content: center; /* Centrar verticalmente */
+align-items: center; /* Centrar horizontalmente */
+padding: 10px; /* Espaciado interno */
+gap: 10px; /* Espaciado entre elementos internos */
+flex-basis: calc(33.33% - 20px); /* Ajusta el ancho para que 3 tarjetas quepan en una fila */
+box-sizing: border-box; /* Asegura que el espaciado y el borde se incluyan en el tamaño total de la tarjeta */
+}
+
+.product-card__image {
+width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+height: auto;
+}
+
+.product-card__name {
+font-size: 18px;
+font-weight: bold;
+color: #ffffff; /* Color del texto */
+}
+
+.product-card__price {
+font-size: 16px;
+color: #ffffff; /* Color del texto */
+}
+
+
+
+  /* Formulario */
+  .form-section {
+    flex: 1; /* Ocupa menos espacio */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+    font-family: 'Press Start 2P';
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .product-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .product-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-submit,
+  .btn-reset {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-reset {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+/* Footer */
+.footer {
+    background-color: #4a148c; /* Color púrpura oscuro */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer__text {
+    margin: 5px 0;
+    font-size: 14px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="assets/logo.png" alt="Logo de AluraGeek" class="header__icon">
+        </div>
+    </header>
+    <main class="main-container">
+      <!-- Sección de productos -->
+        <section class="products-section">
+          <h2 class="products-title">MIS PRODUCTOS:</h2>
+          <div class="products-grid">
+            <!-- Tarjeta 1 -->
+            <div class="product-card">
+              <img src="assets/product1.svg" alt="Producto" class="product-card__image">
+              <h3 class="product-card__name">Stormtrooper</h3>
+              <span class="product-card__price">$60.00</span>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="product-card">
+              <img src="assets/product2.svg" alt="Producto" class="product-card__image">
+              <h3 class="product-card__name">Game Boy Classic</h3>
+              <span class="product-card__price">$100.00</span>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="product-card">
+              <img src="assets/product3.jpg" alt="Producto" class="product-card__image">
+              <h3 class="product-card__name">Xbox Series X</h3>
+              <span class="product-card__price">$499.99</span>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="product-card">
+              <img src="assets/product4.jpg" alt="Producto" class="product-card__image">
+              <h3 class="product-card__name">PlayStation 5</h3>
+              <span class="product-card__price">$499.99</span>
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="product-card">
+              <img src="assets/product5.jpg" alt="Producto" class="product-card__image">
+              <h3 class="product-card__name">Nintendo Switch</h3>
+              <span class="product-card__price">$299.99</span>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="product-card">
+              <img src="assets/product-placeholder.png" alt="Producto" class="product-card__image">
+              <h3 class="product-card__name">MacBook Pro 16"</h3>
+              <span class="product-card__price">$2399.99</span>
+            </div>
+            <!-- Tarjeta 7 -->
+            <div class="product-card">
+              <img src="assets/product-placeholder.png" alt="Producto" class="product-card__image">
+              <h3 class="product-card__name">iPhone 14 Pro</h3>
+              <span class="product-card__price">$1099.00</span>
+            </div>
+            <!-- Tarjeta 8 -->
+            <div class="product-card">
+              <img src="assets/product-placeholder.png" alt="Producto" class="product-card__image">
+              <h3 class="product-card__name">Samsung Galaxy S23</h3>
+              <span class="product-card__price">$999.99</span>
+            </div>
+            <!-- Tarjeta 9 -->
+            <div class="product-card">
+              <img src="assets/product-placeholder.png" alt="Producto" class="product-card__image">
+              <h3 class="product-card__name">Google Pixel 7</h3>
+              <span class="product-card__price">$899.99</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Formulario para agregar productos -->
+        <section class="form-section">
+          <h2 class="form-title">AGREGAR PRODUCTO:</h2>
+          <form class="product-form">
+            <label for="product-name">Nombre:</label>
+            <input type="text" id="product-name" name="product-name" placeholder="nombre..." required>
+      
+            <label for="product-price">Precio:</label>
+            <input type="number" id="product-price" name="product-price" placeholder="precio..." required>
+      
+            <label for="product-image">Imagen (URL):</label>
+            <input type="url" id="product-image" name="product-image" placeholder="imagen..." required>
+      
+            <div class="form-buttons">
+              <button type="submit" class="btn-submit">Enviar</button>
+              <button type="reset" class="btn-reset">Limpiar</button>
+            </div>
+          </form>
+        </section>
+    </main>
+      
+    <footer>
+        <!-- Aquí irá el pie de página -->
+    </footer>
+    <script src="scripts/main.js"></script>  
+</body>
+</html>
